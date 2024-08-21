@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+SALELARY 회원가입
+{% endblock %}
+
+{% block content %}
+<form method="post" action="{% url 'accounts:signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="등록하기">
+</form>
+
+{% endblock %}
